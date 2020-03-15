@@ -1,0 +1,42 @@
+<div id="modal-content-wrapper">
+    <header id="modal-header" style="height: 27px;">
+        <h1 id="modal-title">Focus Statistics</h1>
+    </header>
+    <div style="width: 100%; height: 3px; background-color: black; padding: 0; margin: 0;"> </div>
+
+    <section class="modal-body">
+        <div class="stat-holder"> 
+            <div class="stat-key">
+                Number of Focus Sessions
+            </div>
+            <div class="stat-val">
+                {{numFocus}}
+            </div>
+        </div>
+    </section>
+    <section class="modal-body">
+        <div class="stat-holder"> 
+            <div class="stat-key">
+                Number of Short Breaks
+            </div>
+            <div class="stat-val">
+                {{numShortBreak}}
+            </div>
+        </div>
+    </section>
+    <section class="modal-body">
+        <div class="stat-holder"> 
+            <div class="stat-key">
+                Number of Long Breaks
+            </div>
+            <div class="stat-val">
+                {{numLongBreak}}
+            </div>
+        </div>
+    </section>
+
+
+    <footer id="modal-footer">
+        <button mat-raised-button id="modal-finished-button" (click)="closeModal()">OK</button>
+    </footer>
+</div>

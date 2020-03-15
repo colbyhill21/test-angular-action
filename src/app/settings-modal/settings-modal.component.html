@@ -1,0 +1,66 @@
+<div id="modal-content-wrapper">
+    <header id="modal-header" style="height: 27px;">
+        <h1 id="modal-title">Timer Settings</h1>
+    </header>
+    <div style="width: 100%; height: 3px; background-color: black; padding: 0; margin: 0;"> </div>
+    <section class="modal-body">
+        <div class="setting-holder"> 
+            <div class="setting-key-for-slider">
+                Focus Time
+            </div>
+            <div class="setting-slider">
+                <mat-slider thumbLabel color="primary" min="1" max="30" step="1" value="{{focusLength}}"
+                (input)='changeFocusLengthSlider($event)'></mat-slider>
+            </div>
+        </div>
+    </section>
+    <section class="modal-body">
+        <div class="setting-holder"> 
+            <div class="setting-key-for-slider">
+                Short Break Time
+            </div>
+            <div class="setting-slider">
+                <mat-slider thumbLabel color="primary" min="1" max="30" step="1" value="{{shortBreakLength}}"
+                (input)='changeShortBreakLengthSlider($event)'></mat-slider>
+            </div>
+        </div>
+    </section>
+    <section class="modal-body">
+        <div class="setting-holder"> 
+            <div class="setting-key-for-slider">
+                Long Break Time
+            </div>
+            <div class="setting-slider">
+                <mat-slider thumbLabel color="primary" min="1" max="30" step="1" value="{{longBreakLength}}"
+                (input)='changeLongBreakLengthSlider($event)'></mat-slider>
+            </div>
+        </div>
+    </section>
+    <section class="modal-body">
+        <div class="setting-holder"> 
+            <div class="setting-key-for-toggle">
+                Auto Start Next Round?
+            </div>
+            <div class="setting-toggle">
+                <mat-slide-toggle color="primary"
+                (change)="autoStartToggleChanged($event)"
+                [checked]="autoStartTimer">
+                </mat-slide-toggle>
+            </div>
+        </div>
+    </section>
+    <section class="modal-body">
+        <div class="setting-holder"> 
+            <div class="setting-key-for-slider">
+                Long Break Interval
+            </div>
+            <div class="setting-slider">
+                <mat-slider thumbLabel color="primary" min="1" max="5" step="1" value="{{longBreakInterval}}"
+                (input)='changeLongBreakInterval($event)'></mat-slider>
+            </div>
+        </div>
+    </section>
+    <footer id="modal-footer">
+        <button mat-raised-button id="modal-finished-button" (click)="closeModal()">Done</button>
+    </footer>
+</div>
