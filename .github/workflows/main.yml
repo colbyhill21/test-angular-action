@@ -24,4 +24,3 @@ jobs:
     
     - name: test action
       uses: colbyhill21/angular-full-ci/@master
-
